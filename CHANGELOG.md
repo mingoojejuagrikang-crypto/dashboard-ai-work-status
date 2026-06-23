@@ -2,6 +2,8 @@
 
 ## 2026-06-23
 
+- Deployed the improved dashboard to Cloudflare Pages at `https://pka-e675e4db200183da.pages.dev`.
+- Hardened `deploy.sh` so `.cloudflare.env` is parsed for known keys instead of sourced directly, preventing accidental environment dumps.
 - Renamed the dashboard page title to `대시보드_AI_작업현황`.
 - Reworked home information architecture around scoped project filters.
 - Added `전체`, project chip, and `팀 운영` filtering.

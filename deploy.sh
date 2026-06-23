@@ -5,9 +5,16 @@
 set -e
 cd "$(dirname "$0")"
 
-# 로컬 전용 비밀 파일(gitignore) — 있으면 환경변수로 로드.
+# 로컬 전용 비밀 파일(gitignore) — 있으면 필요한 키만 로드.
+# source를 쓰면 잘못된 "export" 줄 하나로 환경 전체가 출력될 수 있어 파싱한다.
 if [ -f .cloudflare.env ]; then
-  . ./.cloudflare.env
+  CLOUDFLARE_ACCOUNT_ID="$(
+    sed -n 's/^[[:space:]]*export[[:space:]]\{1,\}CLOUDFLARE_ACCOUNT_ID=//p; s/^[[:space:]]*CLOUDFLARE_ACCOUNT_ID=//p' .cloudflare.env | tail -n 1 | sed 's/^"//; s/"$//'
+  )"
+  CLOUDFLARE_API_TOKEN="$(
+    sed -n 's/^[[:space:]]*export[[:space:]]\{1,\}CLOUDFLARE_API_TOKEN=//p; s/^[[:space:]]*CLOUDFLARE_API_TOKEN=//p' .cloudflare.env | tail -n 1 | sed 's/^"//; s/"$//'
+  )"
+  export CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN
 fi
 
 node generate.mjs
