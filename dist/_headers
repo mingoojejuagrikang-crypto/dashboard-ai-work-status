@@ -1,0 +1,7 @@
+# Cloudflare Pages 헤더 규칙 (대시보드_AI_작업현황)
+# data.json은 항상 최신 게시본을 가져오도록 캐시 무효화 — "열 때마다 최신"의 핵심.
+/data.json
+  Cache-Control: no-cache, no-store, must-revalidate
+# 검색엔진 색인 방지(추측 불가 비공개 URL 보강)
+/*
+  X-Robots-Tag: noindex, nofollow
