@@ -16,6 +16,7 @@
   - `LESSONS_AND_NEXT_STEPS.md`
   - `STATUS_SNAPSHOT.md`
 - Changed `.gitignore` so `dist/data.json` is committed as a public status snapshot while secrets remain excluded.
+- Published to GitHub as `dashboard-ai-work-status`; the requested Korean title is kept in the dashboard and documentation.
 
 ## 2026-06-18 ~ 2026-06-19
 

@@ -6,6 +6,9 @@ Last updated: 2026-06-23
 
 This project is a lightweight status dashboard for AI-assisted work. It gathers local markdown sources into `dist/data.json`, then renders a static single-page dashboard from `dist/index.html`.
 
+GitHub repository: `dashboard-ai-work-status`.
+Dashboard title: `대시보드_AI_작업현황`.
+
 The repository is intended to help future AI models and human operators understand:
 
 - What projects are active.

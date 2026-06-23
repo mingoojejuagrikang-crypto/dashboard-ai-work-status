@@ -62,7 +62,8 @@ Cloudflare Pages 프로젝트명은 `.pages-project`에 있습니다. `deploy.sh
 
 ## GitHub 운영 메모
 
-- 저장소명: `대시보드_AI_작업현황`
+- GitHub 저장소명: `dashboard-ai-work-status`
+- 화면/문서 타이틀: `대시보드_AI_작업현황`
 - 내부 npm 패키지명은 스크립트 안정성을 위해 `mypka-dashboard`를 유지합니다.
 - 대시보드 화면 타이틀과 문서 타이틀은 `대시보드_AI_작업현황`으로 맞춥니다.
 - 데이터 스냅샷을 AI가 읽을 수 있게 `dist/data.json`도 커밋합니다.

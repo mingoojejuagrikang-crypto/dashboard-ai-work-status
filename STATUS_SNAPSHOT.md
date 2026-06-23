@@ -38,7 +38,8 @@ Most important next context:
 - Page title: `대시보드_AI_작업현황`
 - Home layout: no-scroll card dashboard with scoped project filters.
 - Detail navigation: home button and browser back both work.
-- GitHub target repository: `대시보드_AI_작업현황`
+- GitHub repository: `dashboard-ai-work-status`
+- Dashboard title: `대시보드_AI_작업현황`
 - Public snapshot policy: commit `dist/data.json`, exclude secrets.
 
 ## Last Verification
